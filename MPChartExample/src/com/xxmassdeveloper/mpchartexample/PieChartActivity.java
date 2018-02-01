@@ -87,6 +87,7 @@ public class PieChartActivity extends DemoBase implements OnSeekBarChangeListene
 
         // add a selection listener
         mChart.setOnChartValueSelectedListener(this);
+//        mChart.setUseCustomHighLightColor(true);
 
         setData(4, 100);
 
@@ -217,6 +218,7 @@ public class PieChartActivity extends DemoBase implements OnSeekBarChangeListene
         dataSet.setSliceSpace(3f);
         dataSet.setIconsOffset(new MPPointF(0, 40));
         dataSet.setSelectionShift(5f);
+//        dataSet.setHighLightColor(Color.BLACK);
 
         // add a lot of colors
 
