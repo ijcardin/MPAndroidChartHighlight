@@ -48,6 +48,11 @@ public interface IPieDataSet extends IDataSet<PieEntry> {
     boolean isUseValueColorForLineEnabled();
 
     /**
+     * Returns the custom highlight color specified when creating the pie data set
+     */
+    int getCustomHighlightColor();
+
+    /**
      *  When valuePosition is OutsideSlice, indicates line width
      *  */
     float getValueLineWidth();

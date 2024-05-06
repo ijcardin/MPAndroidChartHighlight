@@ -25,6 +25,7 @@ public class PieDataSet extends DataSet<PieEntry> implements IPieDataSet {
     private ValuePosition mYValuePosition = ValuePosition.INSIDE_SLICE;
     private int mValueLineColor = 0xff000000;
     private boolean mUseValueColorForLine = false;
+    private int mHighLightColor = 0xff000000;
     private float mValueLineWidth = 1.0f;
     private float mValueLinePart1OffsetPercentage = 75.f;
     private float mValueLinePart1Length = 0.3f;
@@ -182,6 +183,16 @@ public class PieDataSet extends DataSet<PieEntry> implements IPieDataSet {
     /**
      * When valuePosition is OutsideSlice, indicates line width
      */
+    public void setHighLightColor(int color) {
+        this.mHighLightColor = color;
+    }
+
+    @Override
+    public int getCustomHighlightColor() {
+        return this.mHighLightColor;
+    }
+
+    /** When valuePosition is OutsideSlice, indicates line width */
     @Override
     public float getValueLineWidth() {
         return mValueLineWidth;

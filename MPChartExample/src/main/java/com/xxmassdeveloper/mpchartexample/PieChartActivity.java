@@ -134,10 +134,11 @@ public class PieChartActivity extends DemoBase implements OnSeekBarChangeListene
         dataSet.setSliceSpace(3f);
         dataSet.setIconsOffset(new MPPointF(0, 40));
         dataSet.setSelectionShift(5f);
+//        dataSet.setHighLightColor(Color.BLACK);
 
         // add a lot of colors
 
-        ArrayList<Integer> colors = new ArrayList<>();
+        ArrayList<Integer> colors = new ArrayList<Integer>();
 
         for (int c : ColorTemplate.VORDIPLOM_COLORS)
             colors.add(c);
