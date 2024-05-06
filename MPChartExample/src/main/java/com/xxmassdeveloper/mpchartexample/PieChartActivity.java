@@ -117,12 +117,15 @@ public class PieChartActivity extends DemoBase implements OnSeekBarChangeListene
     }
 
     private void setData(int count, float range) {
-        ArrayList<PieEntry> entries = new ArrayList<>();
+
+        float mult = range;
+
+        ArrayList<PieEntry> entries = new ArrayList<PieEntry>();
 
         // NOTE: The order of the entries when being added to the entries array determines their position around the center of
         // the chart.
         for (int i = 0; i < count ; i++) {
-            entries.add(new PieEntry((float) ((Math.random() * range) + range / 5),
+            entries.add(new PieEntry((float) ((Math.random() * mult) + mult / 5),
                     parties[i % parties.length],
                     getResources().getDrawable(R.drawable.star)));
         }
@@ -134,10 +137,11 @@ public class PieChartActivity extends DemoBase implements OnSeekBarChangeListene
         dataSet.setSliceSpace(3f);
         dataSet.setIconsOffset(new MPPointF(0, 40));
         dataSet.setSelectionShift(5f);
+//        dataSet.setHighLightColor(Color.BLACK);
 
         // add a lot of colors
 
-        ArrayList<Integer> colors = new ArrayList<>();
+        ArrayList<Integer> colors = new ArrayList<Integer>();
 
         for (int c : ColorTemplate.VORDIPLOM_COLORS)
             colors.add(c);
@@ -160,7 +164,7 @@ public class PieChartActivity extends DemoBase implements OnSeekBarChangeListene
         //dataSet.setSelectionShift(0f);
 
         PieData data = new PieData(dataSet);
-        data.setValueFormatter(new PercentFormatter(chart));
+        data.setValueFormatter(new PercentFormatter());
         data.setValueTextSize(11f);
         data.setValueTextColor(Color.WHITE);
         data.setValueTypeface(tfLight);
