@@ -860,7 +860,7 @@ public class PieChartRenderer extends DataRenderer {
 
             final boolean accountForSliceSpacing = sliceSpace > 0.f && sliceAngle <= 180.f;
 
-            if (mChart.useCustomHighLightColor()) {
+            if (mChart.useCustomHighlightColor()) {
                 mRenderPaint.setColor(set.getCustomHighlightColor());
             } else {
                 mRenderPaint.setColor(set.getColor(index));

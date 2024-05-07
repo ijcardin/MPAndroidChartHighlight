@@ -91,10 +91,10 @@ public class PieChart extends PieRadarChartBase<PieData> {
     private boolean mDrawCenterText = true;
 
     /**
-     * When useCustomHighLightColor is true, the renderer will use the custom color
+     * When useCustomHighlightColor is true, the renderer will use the custom color
      * instead of the segment's color
      */
-    private boolean mUseCustomHighLightColor = false;
+    private boolean mUseCustomHighlightColor = false;
 
     private float mCenterTextRadiusPercent = 100.f;
 
@@ -492,12 +492,12 @@ public class PieChart extends PieRadarChartBase<PieData> {
      *
      * @param enabled
      */
-    public void setUseCustomHighLightColor(boolean enabled) {
-        this.mUseCustomHighLightColor = enabled;
+    public void setUseCustomHighlightColor(boolean enabled) {
+        this.mUseCustomHighlightColor = enabled;
     }
 
-    public boolean useCustomHighLightColor() {
-        return mUseCustomHighLightColor;
+    public boolean useCustomHighlightColor() {
+        return mUseCustomHighlightColor;
     }
 
     @Override
